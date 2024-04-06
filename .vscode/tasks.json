@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Attach Raspberry Pi RP2 Boot",
+            "command": "BUSID=$(usbipd.exe list | awk '/USB Mass Storage Device, RP2 Boot/ {print $1}') && usbipd.exe attach -w $WSL_DISTRO_NAME -b $BUSID",
+            "type": "shell",
+            "problemMatcher": [
+                "$tsc"
+            ],
+        },
+        {
+            "label": "Detach Raspberry Pi RP2 Boot",
+            "type": "shell",
+            "command": "BUSID=$(usbipd.exe list | awk '/USB Mass Storage Device, RP2 Boot/ {print $1}') && usbipd.exe detach -b $BUSID",
+            "problemMatcher": []
+        }
+    ]
+}
