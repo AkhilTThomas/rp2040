@@ -15,6 +15,8 @@ Cross compiler : `sudo apt install gcc-arm-none-eabi`
 Add the compiler toolchain for rust: `rustup target add thumbv6m-none-eabi`
 `cargo install cargo-binutils`
 `cargo install elf2uf2-rs`
+`lsblk -o NAME,VENDOR` will list the device and the /dev/ name needed to create the mountpoint
+`sudo mount -t vfat  /dev/sda1 /media/pico -o rw,umask=0000`
 
 ## How to flash
 

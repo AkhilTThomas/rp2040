@@ -10,6 +10,8 @@ rustflags = [
  "-C", "link-arg=-Tdefmt.x",
  "-C", "inline-threshold=5",
  "-C", "no-vectorize-loops",
+ "-C", "link-args=--print-memory-usage",
+ "-C", "link-args=-Map=target/led_blink.map",
 ]
 
 [env]
